@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" name="submit" value="submit" onclick="getFormInfo()">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+    function getFormInfo() {
+        $.ajax({
+            url: "http://esl-hz.zkong.com:9999/user/login",
+            type: "post",
+            dataType: "json",
+            data: {
+                account: "nuoboesl",
+                loginType: 3,
+                password: "RWQgyrIh83jwqvPRvWOBRcMqYlkvQ+kDAmTU+AQZ3vAftnFL6psuhgAUN0TpH3eWfw/8QI8bHI7p43wQampgojkjuNtSJwPD/rwm8ekkRCYisinZeULJVvk6400Or3LyjdAFvTtd6Fbr8WNL7ruRjk2yoZwEoiJ/ZcKznU+96tw=",
+            },
+            contentType: "application/json",
+            success: function (data) {
+                alert("成功");
+            },
+            error: function (err) {
+                alert("失败！");
+            }
+        });
+    }
+</script>
+</body>
+</html>
+
